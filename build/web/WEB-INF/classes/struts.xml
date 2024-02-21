@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <include file="Upcustomer.xml" />
+    <package name="new_customer" namespace="/Add_Customer" extends="struts-default">
+        <action name="addNewCus" class="action.AddNewCustomer">
+            <result name="success">/success.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/newCustomer.jsp</result>
+        </action>
+        
+    </package>
+    <package name="new_bill" namespace="/Add_Bill" extends="struts-default">
+        <action name="addBill" class="action.AddNewBill">
+            <result name="success">/success.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/newBill.jsp</result>
+        </action>
+    </package>
+
+</struts>

@@ -1,0 +1,50 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="Upcustomer" namespace="/Update_Customer" extends="struts-default" >
+        <action name="glist" class="action.UpdateCustomer" method="display">
+            <result name="success">/deleteCustomer.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+        </action>
+        <action name="getcustomer" class="action.UpdateCustomer" method="getCustomer" >
+            <result name="success">/customer.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/customer.jsp</result>
+        </action>
+        <action name="updatecustomer" class="action.UpdateCustomer">
+            <result name="success">/success.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/customer.jsp</result>
+        </action>
+    </package>
+    <package name="Delcustomer" namespace="/Delete_Customer" extends="struts-default">
+        <action name="glist" class="action.DeleteCustomer" method="display">
+            <result name="success">/deleteCustomer.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+        </action>
+        <action name="checkcustomer" class="action.DeleteCustomer" method="getCustomer">
+            <result name="success">/deleteCustomer.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/deleteCustomer.jsp</result>
+        </action>
+        <action name="deletecustomer" class="action.DeleteCustomer" >
+            <result name="success">/success.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/deleteCustomer.jsp</result>
+        </action>
+    </package>
+    <package name="Delbill" namespace="/Delete_Bill" extends="struts-default">
+        <action name="checkbill" class="action.DeleteBill" method="verify">
+            <result name="success">/deleteBill.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/deleteBill.jsp</result>
+        </action>
+        <action name="deletebill" class="action.DeleteBill" >
+            <result name="success">/success.jsp</result>
+            <result name="error">/errorMessage.jsp</result>
+            <result name="input">/deleteBill.jsp</result>
+        </action>
+    </package>
+</struts>
